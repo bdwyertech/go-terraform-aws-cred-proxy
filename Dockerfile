@@ -10,5 +10,5 @@ RUN adduser credhelper -S -h /home/credhelper
 
 USER credhelper
 WORKDIR /home/credhelper
-
+EXPOSE 2345
 CMD "/usr/local/bin/terraform-aws-cred-proxy"
