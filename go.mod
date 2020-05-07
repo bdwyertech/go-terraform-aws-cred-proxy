@@ -1,4 +1,4 @@
-module terraform-aws-cred-proxy
+module github.com/bdwyertech/go-terraform-aws-cred-proxy/terraform-aws-cred-proxy
 
 go 1.14
 

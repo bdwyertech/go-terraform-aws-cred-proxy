@@ -4,11 +4,11 @@ COPY . .
 RUN CGO_ENABLED=0 GOFLAGS=-mod=vendor go build .
 
 FROM library/alpine:3.11
-COPY --from=helper /build/terraform-aws-cred-helper /usr/local/bin/
+COPY --from=helper /build/terraform-aws-cred-proxy /usr/local/bin/
 
 RUN adduser credhelper -S -h /home/credhelper
 
 USER credhelper
 WORKDIR /home/credhelper
 
-CMD "/usr/local/bin/terraform-aws-cred-helper"
+CMD "/usr/local/bin/terraform-aws-cred-proxy"
